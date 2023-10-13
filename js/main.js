@@ -107,4 +107,5 @@ function calculoGananciasEsperadas (){
   });
 }
 
+
 calculoGananciasEsperadas()
