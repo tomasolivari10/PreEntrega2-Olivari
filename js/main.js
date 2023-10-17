@@ -8,14 +8,14 @@ let cumpleRequisitos = true
 function betsTennis() {
 
   do {
-    let usuario = prompt("ingresa tu nombre completo").trim()
+    let usuario = prompt("ingresa tu nombre completo").trim().toLowerCase()
     if (usuario === "") {
       alert("No ingresaste ningun dato, volve a intentarlo")
-      usuario = prompt("Para continuar deberas ingresar tu nombre y apellido").trim()
+      usuario = prompt("Para continuar deberas ingresar tu nombre y apellido").trim().toLowerCase()
     }
 
     let edad = parseInt(prompt("Ingresa tu edad"))
-    let pais = prompt("Ingresa tu pais de residencia").trim()
+    let pais = prompt("Ingresa tu pais de residencia").trim().toLowerCase()
 
     if (edad < 18 && pais !== "argentina") {
       alert("Este sitio no es para ti.")
