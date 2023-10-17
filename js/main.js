@@ -38,7 +38,7 @@ betsTennis()
 
 if (cumpleRequisitos) {
 
-//CODIGO PRE ENTREGA 2
+  //CODIGO PRE ENTREGA 2
 
   alert("Ya estás dentro del sitio, a continuación podrás elegir y apostar libremente en nuestros eventos en vivo.");
 
@@ -88,8 +88,9 @@ if (cumpleRequisitos) {
   eventoDisponible();
 
 
+
   function calculoGananciasEsperadas() {
-    let cantidadApostada = parseFloat(prompt("Ingresa cuanto deseas apostar"))
+    let cantidadApostada = parseFloat(prompt("Ingresa cuanto desearias apostar, para asi poder enseñarte las ganancias estimadas por jugador"))
     let gananciasEstimadas = [];
 
     //bucle para iterar el array original y crear dos copias multiplicando lo que ingresa el usuario por las ganancias por jugador.
@@ -112,6 +113,56 @@ if (cumpleRequisitos) {
       console.log(`Ganancia 2: ${apuesta.ganancia2}`);
     });
   }
+
+
+  calculoGananciasEsperadas()
+
+
+  function apuestaElegida() {
+    alert("Ahora que ya conoces las ganancias estimadas para tu apuesta, por quien deseas hacerla?")
+
+    let seleccionJugador = prompt("Ingresa el nombre del jugador por el que deseas apostar").trim().toLowerCase()
+    let cantidadAingresar = parseFloat(prompt("Ingresa la cantidad de dinero que deseas apostar por el jugador que elegiste"))
+
+    switch (seleccionJugador) {
+      case "alcaraz": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[0].ganancia1 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "rublev": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[0].ganancia2 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "djokovic": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[1].ganancia1 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "tsitsipas": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[1].ganancia2 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "medvedev": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[2].ganancia1 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "sinner": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[2].ganancia2 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "kyrgios": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[3].ganancia1 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "rune": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[3].ganancia2 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "shelton": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[4].ganancia1 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "cerundolo": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[4].ganancia2 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "de minaur": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[5].ganancia1 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "ruud": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[5].ganancia2 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "kachanov": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[6].ganancia1 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "fritz": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[6].ganancia2 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "berretini": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[7].ganancia1 * cantidadAingresar + ". Muchas gracias.")
+        break;
+      case "aliassime": console.log("Tu apuesta fue ingresada correctamente, en caso de acertar tus ganancias seran de: " + apuestasDisponibles[7].ganancia2 * cantidadAingresar + ". Muchas gracias.")
+        break;
+
+      default: alert("Has ingresado mal el nombre o un jugador que no esta entre los disponibles")
+    }
+  }
+
+  apuestaElegida()
+
 }
 
-calculoGananciasEsperadas()
